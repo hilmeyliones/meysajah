@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Hilmi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2F2F2F;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out; /* Menambahkan animasi fade-in pada body */
+}
+
+/* Animasi FadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* Animation for each section */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.section.visible {
+    opacity: 1;
+}
+
+
+
+        /* Header */
+        header {
+            background-color: #2F2F2F;
+            color: white;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav a {
+            margin-left: 20px;
+            font-weight: bold;
+            color: white;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        nav a:hover, nav a:focus {
+            color: #ff6f61;
+            text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 30px #ff6f61;
+        }
+/* Gaya dasar untuk navigasi */
+/* Gaya dasar untuk navigasi */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Jarak antar tombol lebih kecil */
+    margin-top: 20px;
+}
+
+/* Tombol kotak */
+.nav-btn {
+    background-color: #808080; /* Warna abu-abu */
+    color: white; /* Warna teks tombol */
+    padding: 10px 15px; /* Padding dalam tombol */
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px; /* Sudut sedikit melengkung */
+    text-decoration: none; /* Menghapus garis bawah */
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Animasi hover */
+}
+
+/* Efek saat hover */
+.nav-btn:hover {
+    background-color: #6c6c6c; /* Warna lebih gelap saat hover */
+}
+
+.nav-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(128, 128, 128, 0.6); /* Fokus dengan shadow */
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    background-image: url('bg1.jpg');
+    background-size: cover; /* Gambar akan mengisi area kontainer */
+    background-position: center center; /* Menjaga gambar tetap di tengah */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    flex-direction: column;
+}
+
+
+        .hero .hero-content {
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 4px solid #fff;
+            animation: typing 4s steps(30) infinite, blink 1s step-end infinite;
+            transition: text-shadow 0.3s ease;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: auto;
+        }
+
+/* Hero Section */
+.hero img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: glow 1.5s infinite alternate; /* Animasi cahaya hijau */
+}
+
+/* Animasi Glow (Cahaya Hijau) */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5);
+    }
+}
+
+
+
+
+}
+/* Jarak antar bagian */
+.hero,.clock,.about, .hobbies, .portfolio, .contact {
+    padding: 60px 10%;
+}
+/* Menambah jarak bawah di section hero */
+.hero {
+    margin-bottom: 100px;
+}
+/* Menambah jarak bawah di section clock */
+.clock {
+    margin-bottom: 40px;
+}
+
+
+/* Menambah jarak bawah di section About */
+.about {
+    margin-bottom: 400px;
+}
+
+/* Menambah jarak bawah di section Hobbies */
+.hobbies {
+    margin-bottom: 350px;
+}
+
+/* Menambah jarak bawah di section Portfolio */
+.portfolio {
+    margin-bottom: 350px;
+}
+
+/* Menambah jarak bawah di section Contact */
+.contact {
+    margin-bottom: 200px;
+}
+.centered {
+    text-align: center;  /* Menyelaraskan teks di tengah */
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+
+/* Kartu untuk jam */
+.clock-card {
+    background-color: #000; /* Warna abu-abu kehitaman */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center; /* Posisikan isi jam di tengah kartu */
+    align-items: center;
+}
+
+/* Jam */
+.clock {
+    display: flex;
+    gap: 10px;
+    background-color: #2F2F2F;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Segmen waktu */
+.time-segment {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #fff, #fff);
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Separator antara segmen waktu */
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Media query untuk tampilan landscape (posisi horizontal) */
+@media screen and (orientation: landscape) {
+    .clock-container {
+        justify-content: center; /* Jam tetap berada di tengah horizontal */
+        align-items: center; /* Tetap berada di tengah vertikal */
+    }
+
+    /* Menyesuaikan ukuran font dan jarak antar elemen */
+    .time-segment {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    .separator {
+        font-size: 2rem;
+    }
+}
+
+/* Media query untuk tampilan portrait (posisi vertikal) */
+@media screen and (orientation: portrait) {
+    .clock-container {
+        justify-content: flex-start; /* Posisi jam di atas saat vertikal */
+        align-items: center; /* Tetap di tengah vertikal */
+    }
+}
+
+
+.about {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.about-image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px; /* Sesuaikan dengan lebar yang diinginkan */
+}
+
+.anime-character {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Menghaluskan sudut gambar karakter */
+    z-index: 1;
+}
+
+.background-img {
+    background-image: url('background-transparent.png'); /* Ganti dengan latar belakang PNG Anda */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px; /* Sesuaikan dengan border gambar karakter */
+    z-index: 0;
+}
+
+.about h2 {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.about p {
+    color: #ddd;
+    font-size: 1.2rem;
+}
+
+
+}
+
+.hobbies {
+    padding: 20px;
+    text-align: center;
+}
+
+.hobbies-gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hobbies-gallery {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+}
+
+.hobby-card {
+    display: none; /* Default, hide all cards */
+    width: 350px; /* Lebih lebar */
+    height: 450px; /* Lebih panjang */
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    position: relative;
+    color:#000;
+}
+
+.hobby-card img {
+    width: 100%;
+    height: 200px; /* Atur tinggi gambar */
+    object-fit: cover;
+    border-radius: 5px;
+    color:#000;
+}
+
+.play-button {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.play-button:hover {
+    background-color: #1AA34A;
+
+}
+
+.hobbies {
+    padding: 20px;
+    text-align: center;
+}
+
+.hobbies-gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hobbies-gallery {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+}
+
+.hobby-card {
+    display: none; /* Default, hide all cards */
+    width: 350px; /* Lebih lebar */
+    height: 450px; /* Lebih panjang */
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    position: relative;
+}
+
+.hobby-card img {
+    width: 100%;
+    height: 200px; /* Atur tinggi gambar */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Tombol Scroll berada di bawah card */
+.scroll-button {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    position: absolute;
+    bottom: 15px;  /* Menempatkan tombol di bawah card */
+    left: 50%;  /* Memposisikan tombol di tengah */
+    transform: translateX(-50%); /* Mengatur tombol agar benar-benar di tengah */
+}
+
+.scroll-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+        /* Portfolio Gallery */
+        .projects-gallery {
+            display: flex;
+            overflow-x: scroll;
+            gap: 20px;
+            padding: 20px 0;
+            color:#fff;
+            scroll-snap-type: x mandatory;
+        }
+
+        .project-card {
+            min-width: 300px;
+            background-color: #fff;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            color:#fff;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            color:#fff;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 10px;
+                font-size: 1rem;
+            }
+
+            .hero {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+
+            .hero img {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 20px;
+            }
+
+            .about, .hobbies, .portfolio, .contact {
+                padding: 40px 5%;
+            }
+
+            .about img, .about-card, .hobby-card, .project-card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .about h2 {
+                font-size: 1.5rem;
+            }
+
+            .hobby-card, .project-card {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+/* Default styling ikon media sosial */
+
+.contact .social-icons {
+    
+    display: flex;
+    justify-content: center; /* Posisi di tengah */
+    align-items: center; /* Vertikal tengah */
+    gap: 30px; /* Jarak antar ikon */
+    padding: 20px 0;
+}
+
+/* Ukuran default ikon */
+.social-icons a {
+    font-size: 3rem;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #4caf50;
+    transform: scale(1.2); /* Efek hover */
+}
+
+
+/* Media query untuk desktop */
+@media (min-width: 1024px) {
+    .social-icons a {
+        font-size: 4rem; /* Ukuran besar untuk desktop */
+    }
+}
+
+/* Media query untuk orientasi landscape */
+@media (orientation: landscape) {
+    .contact .social-icons {
+        justify-content: center; /* Ikon tetap di tengah */
+        align-items: center;
+        padding: 20px 0;
+        gap: 40px; /* Jarak antar ikon lebih besar */
+    }
+
+    .social-icons a {
+        font-size: 4rem; /* Pastikan ukuran ikon besar */
+    }
+}
+
+/* Media query untuk memastikan landscape mode di perangkat kecil */
+@media (max-height: 500px) and (orientation: landscape) {
+    .contact .social-icons {
+        justify-content: center; /* Pastikan tetap di tengah */
+        align-items: center; /* Tengah secara vertikal */
+        gap: 40px; /* Jarak antar ikon */
+    }
+
+    .social-icons a {
+        font-size: 4rem; /* Ukuran ikon tetap besar */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <h1>INI PORTFOLIO GW</h1>
+        <nav>
+<nav>
+    <a href="#about" class="nav-btn">INI GW</a>
+    <a href="#hobbies" class="nav-btn"> HOBI GW</a>
+    <a href="#portfolio" class="nav-btn"> LAST PROJECT</a>
+    <a href="#contact" class="nav-btn">KONTAK</a>
+</nav>
+
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>HILMI HiDAYATULAH</h2>
+            <p>GW Saat ini Siswa yang lagi bersemangat belajar dan berbagi pengetahuan.</p>
+        </div>
+        <img src="lih.jpg" alt="Foto Hilmi">
+    </div>
+ <head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Container untuk jam -->
+<h2 class="centered">JAM</h2>
+
+<div class="clock-container">
+  
+    <div class="clock-card">
+        <div class="clock" id="clock">
+            <div class="time-segment" id="hours">00</div>
+            <div class="separator">:</div>
+            <div class="time-segment" id="minutes">00</div>
+            <div class="separator">:</div>
+            <div class="time-segment" id="seconds">00</div>
+        </div>
+    </div>
+</div>
+<div id="about" class="about">
+    <h2>About Me</h2>
+    <!-- Gambar dengan karakter anime dan latar belakang PNG -->
+    <div class="about-image-container">
+        <img src="anime-character.png" alt="Karakter Anime" class="anime-character">
+        <div class="background-img"></div>
+    </div>
+        <p>Gw sekarang seorang Siswa yang bersemangat belajar dan berbagi pengetahuan. Gw juga untuk saat ini tertarik untuk mengeksplorasi teknologi baru dalam pengembangan web.</p>
+    </div>
+       <div id="hobbies" class="hobbies">
+    <h2>Hobi Saya</h2>
+    <p> pencet aja dulu</p>
+    <div class="hobbies-gallery-container">
+        <button class="scroll-button" id="prevBtn">←</button>
+        <div class="hobbies-gallery">
+            <!-- Card 1 -->
+            <div class="hobby-card">
+                <img src="foto.jpg" alt="Hobi 1">
+                <p>Fotografi</p>
+                <p>Yang penting jeprat-jepret, bagus atau tidak ada cupcat.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="hobby-card">
+                <img src="ml.jpg" alt="Hobi 2">
+                <p>Game Mobile Legend</p>
+                <p>Gausah komen, gw tau gw blom glory.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="hobby-card">
+                <img src="olahraga.jpg" alt="Hobi 3">
+                <p>Badminton</p>
+                <p>Dikit-dikit lah bro olahraga.</p>
+            </div>
+
+            <!-- Card 4 (Musik dengan Spotify) -->
+            <div class="hobby-card">
+                <img src="musik.jpg" alt="Hobi Musik">
+                <p>Musik</p>
+                <button class="play-button" onclick="playSpotify()">Putar Lagu</button>
+                <div id="spotify-player" style="display: none;">
+                    <iframe src="https://open.spotify.com/embed/track/1Ztka7fCyxUv46FW1mZH9T" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+            </div>
+        </div>
+        <button class="scroll-button" id="nextBtn">→</button>
+    </div>
+</div>
+
+
+    <script>
+        function playSpotify() {
+            const spotifyPlayer = document.getElementById("spotify-player");
+
+            // Toggle visibility of the Spotify player
+            if (spotifyPlayer.style.display === "none" || spotifyPlayer.style.display === "") {
+                spotifyPlayer.style.display = "block";
+            } else {
+                spotifyPlayer.style.display = "none";
+            }
+        }
+    </script>
+
+    <div id="portfolio" class="portfolio">
+        <h2>Proyek Terakhir yang gw buat</h2>
+        <p>scrol aja dulu ke kanan</p>
+        <div class="projects-gallery">
+            <div class="project-card">
+                <img src="ptt.jpg" alt="Proyek 1">
+                <p>Proyek Website Informasi terkait pesanan tinta</p>
+            </div>
+            <div class="project-card">
+                <img src="pt.jpg" alt="Proyek 2">
+                <p>Proyek Aplikasi portfolio sekolah</p>
+            </div>
+            <div class="project-card">
+                <img src="Wb.jpg" alt="Proyek 3">
+                <p>Proyek Web Informasi terkait pemeliharaan fasilitas</p>
+            </div>
+                        <div class="project-card">
+                <img src="kosong.jpg" alt="Proyek 2">
+                <p>kosong</p>
+            </div>
+                        <div class="project-card">
+                <img src="kosong.jpg" alt="Proyek 2">
+                <p>kosong</p>
+            </div>
+                        <div class="project-card">
+                <img src="kosong.jpg" alt="Proyek 2">
+                <p>kosong</p>
+            </div>
+            <div class="project-card">
+                <img src="kosong.jpg" alt="Proyek 2">
+                <p>kosong</p>
+            </div>
+            <div class="project-card">
+                <img src="kosong.jpg" alt="Proyek 2">
+                <p>kosong</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contact">
+        <h2>Kontak</h2>
+        <p>Jika Anda tertarik untuk bekerja bersama saya,sebaik nya jangan soalnya gw orangnya kadang kiding bikin ini juga gabut dan jangan kunjungi media sosial berikut:</p>
+        <div class="social-icons">
+            <a href="https://instagram.com/HILMI/hilmy_h3" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://fb.me/your-facebook-id" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/6285215543829" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+
+            const now = new Date();
+
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            // Format waktu dengan menambahkan angka nol di depan jika angka kurang dari 10
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            hoursElement.textContent = hours;
+            minutesElement.textContent = minutes;
+            secondsElement.textContent = seconds;
+        }
+
+        setInterval(updateClock, 1000); // Memperbarui jam setiap detik
+        updateClock(); // Menampilkan jam segera setelah halaman dimuat
+        
+    </script>
+    <script>
+    
+        // Toggle display of the Spotify player
+    if (spotifyPlayer.style.display === "none" || spotifyPlayer.style.display === "") {
+        spotifyPlayer.style.display = "block";
+    } else {
+        spotifyPlayer.style.display = "none";
+    }
+}
+
+    </script>
+    <script>
+      document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        // Get the target section
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        
+        // Scroll to the section smoothly
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+        
+        // Trigger the animation by adding the "visible" class
+        targetSection.classList.add('visible');
+        
+        // Optionally, remove the "visible" class after the animation is complete
+        setTimeout(() => {
+            targetSection.classList.remove('visible');
+        }, 1000); // Duration of animation (1s)
+    });
+});
+</script>
+<script> 
+let currentIndex = 0;
+const hobbyCards = document.querySelectorAll(".hobby-card");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+// Show only one card at a time
+function showCard(index) {
+    hobbyCards.forEach((card, i) => {
+        card.style.display = (i === index) ? 'block' : 'none';
+    });
+}
+
+// Show next card
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % hobbyCards.length;
+    showCard(currentIndex);
+});
+
+// Show previous card
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + hobbyCards.length) % hobbyCards.length;
+    showCard(currentIndex);
+});
+
+// Initialize the gallery by showing the first card
+showCard(currentIndex);
+
+// Function to play Spotify when the button is clicked
+function playSpotify() {
+    const spotifyPlayer = document.getElementById('spotify-player');
+    spotifyPlayer.style.display = 'block';
+}
+
+</script>
+
+</body>
+</html>
